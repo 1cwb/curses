@@ -1,14 +1,17 @@
 # curses
-a c++ class based on curses
-主要真针对linux terminal 的ui库curses进行了c++封装。
-使用之前先安装curses库
-编译时请添加链接：
-cmake中：
+## a c++ class based on curses
+### 主要真针对linux terminal 的ui库curses进行了c++封装。
+### 使用之前先安装curses库
+### 编译时请添加链接：
+### cmake中：
+```cpp 
 target_link_libraries(test "ncurses")
 target_link_libraries(test "panel")
 target_link_libraries(test "menu")
 //target_link_libraries(test "form") 表单库没有添加
 Example:
+```
+```cpp 
 int main(int argc, char** argv)
 {
     char data[256];
@@ -38,4 +41,5 @@ int main(int argc, char** argv)
     }
     base.mwgetch();
     return 0;
-}
+ }
+```
